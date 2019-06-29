@@ -1,0 +1,25 @@
+nav {
+  background: #de4c8a;
+  color:white;
+  height:45px;
+  h2 {
+    margin:0;
+    display: inline-block;
+    cursor:pointer;
+  }
+  ul {
+    margin:0;
+    float:right;
+    li{
+      display:inline-block;
+      padding-left:20px;
+      padding-right:20px;
+      padding-top:10px;
+      padding-bottom:10px;
+      a{
+        cursor:pointer;
+        font-weight: 600;
+      }
+    }
+  }
+}
