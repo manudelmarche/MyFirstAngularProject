@@ -9,12 +9,6 @@
 </nav>
 
 <div class='container'>
-  <div *ngFor="let event of events">
-    <img [src]="event.imageSrc" />
-    <h1 [ngClass]="{'redTitle' : event.price>15}">{{event.name}}</h1>
-    <p>{{event.date}}</p>
-    <p>{{event.price}}</p>
-    <p>{{event.description}}</p>
-  </div>
+  <app-music-event [event]="event" *ngFor='let event of events'></app-music-event>
 </div>
 
