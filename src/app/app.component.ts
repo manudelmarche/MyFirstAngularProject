@@ -42,4 +42,8 @@ export class AppComponent {
       description: 'Everybody in white!',
       imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Sensationwhite_2007.JPG',
     }];
+
+    logName(value: string) {
+      console.log(value);
+    }
   }
