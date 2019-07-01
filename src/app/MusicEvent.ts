@@ -1,4 +1,4 @@
-export class MusicEvents {
+export class MusicEvent {
   name: string;
   date: Date;
   price: number;
