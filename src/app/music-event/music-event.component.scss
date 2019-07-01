@@ -1,3 +1,17 @@
 .redTitle {
   color:red;
 }
+
+mat-card {
+  padding: 0;
+  margin: 5px;
+  img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .eventDataContainer {
+    width: 100%;
+    padding: 10px 15px;
+  }
+}
