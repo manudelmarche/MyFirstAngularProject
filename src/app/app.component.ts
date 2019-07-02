@@ -24,14 +24,14 @@ export class AppComponent {
     {
       name: 'HighLands',
       date: new Date('04/08/2019'),
-      price: 50,
+      price: 55,
       description: 'Loads of boom-boom',
       imageSrc: 'https://s29745.pcdn.co/wp-content/uploads/2018/09/41580112_10156173992978025_4013920836766400512_o.jpg.optimal.jpg',
     },
     {
       name: 'Tommorow Land',
       date: new Date('04/10/2019'),
-      price: 15,
+      price: 115,
       description: 'Commercially spoiled event',
       imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tomorrowland_2017.jpg/1600px-Tomorrowland_2017.jpg',
     },

@@ -3,7 +3,7 @@
   <div class="eventDataContainer">
     <h1 [ngClass]="{'redTitle' : event.price>15}">{{AddBang(event.name) | uppercase}}</h1>
     <p>{{event.date | date: 'longDate'}}</p>
-    <p [ngStyle]="{color: color}">{{event.price | currency:'EUR'}}</p>
+    <p [ngStyle]="{color: color}">{{event.price | priceRange :'bucht'}}</p>
     <p>{{AddBang(event.description)}}</p>
     <button mat-flat-button color="primary" (click)="emitToParent()">Click me!</button>
   </div>
