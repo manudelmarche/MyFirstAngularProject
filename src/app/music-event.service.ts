@@ -6,7 +6,7 @@ import { MusicEvent } from './MusicEvent';
 })
 export class MusicEventService {
 
-   events: MusicEvent[]=[{
+   events: MusicEvent[] = [{
     name: 'LowLands',
     date: new Date('04/07/2019'),
     price: 22,
@@ -46,7 +46,7 @@ export class MusicEventService {
 
   constructor() { }
 
-  GetMusicEvents() : MusicEvent[] {
+  GetMusicEvents(): MusicEvent[] {
     return this.events;
   }
 

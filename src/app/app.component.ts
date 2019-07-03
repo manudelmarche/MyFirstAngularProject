@@ -7,13 +7,13 @@ import { MusicEventService } from './music-event.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   musicevents: MusicEvent[];
 
   constructor(private musicEventService: MusicEventService) { }
 
   ngOnInit(): void {
-      this.musicevents=this.musicEventService.GetMusicEvents();
+      this.musicevents = this.musicEventService.GetMusicEvents();
       console.log(this.musicevents.length);
   }
 

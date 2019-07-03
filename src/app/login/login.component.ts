@@ -15,13 +15,13 @@ export class LoginComponent implements OnInit {
   }
 
   Cancel() {
-    this.username='';
-    this.password='';
+    this.username = '';
+    this.password = '';
   }
 
   Login() {
-    this.username='';
-    this.password='';
+    this.username = '';
+    this.password = '';
   }
 
 }
