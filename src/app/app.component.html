@@ -3,7 +3,8 @@
     <h2>MyApp</h2>
     <ul>
       <li><a>Add new event</a></li>
-      <li><a>Login</a></li>
+      <li *ngIf="!user"><a>Login</a></li>
+      <li *ngIf="user"><a>Logout {{user.usermane}}</a></li>
     </ul>
   </div>
 </nav>
