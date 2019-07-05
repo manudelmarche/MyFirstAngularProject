@@ -1,9 +1,9 @@
 <nav>
   <div class="col-8 offset-2">
-    <h2 [routerLink]="['/home']" routerLinkActive="router-link-active" >MyApp</h2>
+    <h2 [routerLink]="['home']" routerLinkActive="router-link-active" >MyApp</h2>
     <ul>
-      <li><a>Add new event</a></li>
-      <li *ngIf="!user"><a>Login</a></li>
+      <li [routerLink]="['event','add']"><a>Add new event</a></li>
+      <li *ngIf="!user" [routerLink]="['login']"><a>Login</a></li>
       <li *ngIf="user" (click)="Logout()"><a>Logout {{user.username}}</a></li>
     </ul>
   </div>
