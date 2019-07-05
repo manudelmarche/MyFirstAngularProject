@@ -17,11 +17,17 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
       this.musicevents = this.musicEventService.GetMusicEvents();
-      this.user = this.loginService.GetUser();
+      this.loginService.GetUser().subscribe((user: User) => {
+        this.user = user;
+      });
       console.log(this.musicevents.length);
   }
 
   logName(value: string) {
     console.log(value);
+  }
+
+  Logout() {
+    this.loginService.Logout();
   }
 }

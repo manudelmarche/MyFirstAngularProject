@@ -4,7 +4,7 @@
     <ul>
       <li><a>Add new event</a></li>
       <li *ngIf="!user"><a>Login</a></li>
-      <li *ngIf="user"><a>Logout {{user.usermane}}</a></li>
+      <li *ngIf="user" (click)="Logout()"><a>Logout {{user.username}}</a></li>
     </ul>
   </div>
 </nav>
