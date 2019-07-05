@@ -1,6 +1,6 @@
 <nav>
   <div class="col-8 offset-2">
-    <h2>MyApp</h2>
+    <h2 [routerLink]="['/home']" routerLinkActive="router-link-active" >MyApp</h2>
     <ul>
       <li><a>Add new event</a></li>
       <li *ngIf="!user"><a>Login</a></li>
@@ -9,12 +9,7 @@
   </div>
 </nav>
 
-<div class='container'>
-  <app-login></app-login>
-  <div class="row">
-    <div *ngFor='let event of musicevents' class='col-6'>
-      <app-music-event [event]="event" (clickevent)="logName($event)" ></app-music-event>
-    </div>
-  </div>
+<div class='container' id="contentContainer">
+  <router-outlet></router-outlet>
 </div>
 

@@ -7,13 +7,18 @@ import {MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule} from 
 import { PriceRangePipe } from './price-range.pipe';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { MusicEventListComponent } from './music-event-list/music-event-list.component';
+import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MusicEventComponent,
     PriceRangePipe,
-    LoginComponent
+    LoginComponent,
+    MusicEventListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,14 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatCardModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([{
+      path: 'home', component: MusicEventListComponent
+    },{
+      path: '',redirectTo: 'home', pathMatch: 'full'
+    },{
+      path: '**', component: NotFoundComponent
+    }])
   ],
   exports: [
     MatInputModule

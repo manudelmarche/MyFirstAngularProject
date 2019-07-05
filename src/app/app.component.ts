@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MusicEvent } from './MusicEvent';
-import { MusicEventService } from './music-event.service';
 import { LoginService } from './login.service';
 import { User } from './user';
 
@@ -10,22 +8,16 @@ import { User } from './user';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  musicevents: MusicEvent[];
   user: User;
 
-  constructor(private musicEventService: MusicEventService, private loginService: LoginService) { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
-      this.musicevents = this.musicEventService.GetMusicEvents();
       this.loginService.GetUser().subscribe((user: User) => {
         this.user = user;
       });
-      console.log(this.musicevents.length);
   }
 
-  logName(value: string) {
-    console.log(value);
-  }
 
   Logout() {
     this.loginService.Logout();
