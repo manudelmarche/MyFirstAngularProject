@@ -1,0 +1,10 @@
+<mat-card>
+  <img [src]="event.imageSrc" />
+  <div class="eventDataContainer">
+    <h1>{{event.name}}</h1>
+    <p>{{event.date | date}}</p>
+    <p [ngStyle]="{color: color}">{{event.price | currency: 'EUR'}}</p>
+    <p>{{event.description}}</p>
+  </div>
+  <div class='overlay'></div>
+</mat-card>

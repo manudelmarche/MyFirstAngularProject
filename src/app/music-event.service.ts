@@ -7,6 +7,7 @@ import { MusicEvent } from './MusicEvent';
 export class MusicEventService {
 
    events: MusicEvent[] = [{
+    id: 0,
     name: 'LowLands',
     date: new Date('04/07/2019'),
     price: 22,
@@ -14,6 +15,7 @@ export class MusicEventService {
     imageSrc: 'https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/Top50MusicFestivalsintheWorld_UMF.jpg',
     },
     {
+      id: 1,
       name: 'MidLands',
       date: new Date('04/09/2019'),
       price: 15,
@@ -21,6 +23,7 @@ export class MusicEventService {
       imageSrc: 'https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/Top15FestivalsUSA_EDCLasVegas.jpg',
     },
     {
+      id: 2,
       name: 'HighLands',
       date: new Date('04/08/2019'),
       price: 55,
@@ -28,6 +31,7 @@ export class MusicEventService {
       imageSrc: 'https://s29745.pcdn.co/wp-content/uploads/2018/09/41580112_10156173992978025_4013920836766400512_o.jpg.optimal.jpg',
     },
     {
+      id: 3,
       name: 'Tommorow Land',
       date: new Date('04/10/2019'),
       price: 115,
@@ -35,6 +39,7 @@ export class MusicEventService {
       imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tomorrowland_2017.jpg/1600px-Tomorrowland_2017.jpg',
     },
     {
+      id: 4,
       name: 'White sensations',
       date: new Date('04/11/2019'),
       price: 15,
@@ -48,6 +53,10 @@ export class MusicEventService {
 
   GetMusicEvents(): MusicEvent[] {
     return this.events;
+  }
+
+  GetMusicEvent(id: number) : MusicEvent {
+    return this.events.find(item => item.id===id);
   }
 
 }
