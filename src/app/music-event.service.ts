@@ -59,4 +59,8 @@ export class MusicEventService {
     return this.events.find(item => item.id===id);
   }
 
+  AddMusicEvent(musicevent: MusicEvent) {
+    musicevent.id=this.events.length;
+    this.events.push(musicevent);
+  }
 }
