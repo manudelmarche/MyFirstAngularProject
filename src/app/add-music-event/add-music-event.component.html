@@ -2,24 +2,29 @@
   <h2>Add a new event</h2>
   <form [formGroup]="musicEventForm">
     <mat-form-field>
-      <input placeholder="Name" matInput formControlName="Name"/>
+      <input placeholder="Name *" matInput formControlName="Name"/>
+    </mat-form-field>
+    <span *ngIf="musicEventForm.get('Name').touched && musicEventForm.get('Name').errors">
+      Please specify a name of at least 3 characters.
+    </span>
+    <mat-form-field>
+      <input placeholder="Price *" matInput type="number" formControlName="Price"/>
     </mat-form-field>
     <mat-form-field>
-      <input placeholder="Price" matInput type="number" formControlName="Price"/>
-    </mat-form-field>
-    <mat-form-field>
-      <input placeholder="Date" matInput formControlName="Date"/>
+      <input placeholder="Date *" matInput formControlName="Date"/>
     </mat-form-field>
     <mat-form-field>
       <input placeholder="Image URL" matInput formControlName="ImageUrl"/>
     </mat-form-field>
     <mat-form-field>
-      <textarea placeholder="Description" matInput formControlName="Description"></textarea>
+      <textarea placeholder="Description *" matInput formControlName="Description"></textarea>
     </mat-form-field>
     <div class="buttonContainer">
-      <button mat-flat-button color="primary">Add</button>
+      <button mat-flat-button color="primary" [disabled]="!musicEventForm.valid">Add</button>
       <button mat-flat-button>Cancel</button>
     </div>
   </form>
   {{musicEventForm.value | json}}
+  {{'valid: ' + musicEventForm.valid}}
+  {{'dirty: ' + musicEventForm.dirty}}
 </mat-card>
