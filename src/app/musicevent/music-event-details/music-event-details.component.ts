@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MusicEvent } from '../MusicEvent';
-import { MusicEventService } from '../music-event.service';
+import { MusicEvent } from '../../MusicEvent';
+import { MusicEventService } from '../../music-event.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({

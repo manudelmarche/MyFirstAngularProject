@@ -1,53 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { MusicEventComponent } from './music-event/music-event.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule} from '@angular/material';
-import { PriceRangePipe } from './price-range.pipe';
+import { MatInputModule, MatFormFieldModule, MatCardModule} from '@angular/material';
 import { LoginComponent } from './login/login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MusicEventListComponent } from './music-event-list/music-event-list.component';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AddMusicEventComponent } from './add-music-event/add-music-event.component';
-import { MusicEventDetailsComponent } from './music-event-details/music-event-details.component';
-import { HttpClientModule } from '@angular/common/http';
+import { MusicEventModule } from './musicevent/music-event-module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MusicEventComponent,
-    PriceRangePipe,
     LoginComponent,
-    MusicEventListComponent,
-    NotFoundComponent,
-    AddMusicEventComponent,
-    MusicEventDetailsComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatCardModule,
-    MatInputModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
+    MatFormFieldModule,
+    MatCardModule,
     RouterModule.forRoot([{
-      path: 'home', component: MusicEventListComponent
-    },{
       path: 'login', component:LoginComponent
-    },{
-      path: 'event/add', component:AddMusicEventComponent
-    },{
-      path: 'event/:id', component:MusicEventDetailsComponent
     },{
       path: '',redirectTo: 'home', pathMatch: 'full'
     },{
       path: '**', component: NotFoundComponent
-    }])
+    }]),
+    MusicEventModule
   ],
   exports: [
     MatInputModule

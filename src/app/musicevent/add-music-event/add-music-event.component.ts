@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MusicEvent } from '../MusicEvent';
-import { MusicEventService } from '../music-event.service';
+import { MusicEvent } from '../../MusicEvent';
+import { MusicEventService } from '../../music-event.service';
 
 @Component({
   selector: 'app-add-music-event',

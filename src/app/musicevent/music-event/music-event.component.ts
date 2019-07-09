@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { MusicEvent } from '../MusicEvent';
+import { Component, Input } from '@angular/core';
+import { MusicEvent } from '../../MusicEvent';
 
 @Component({
     selector: 'app-music-event',

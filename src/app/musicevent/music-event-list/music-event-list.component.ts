@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MusicEventService } from '../music-event.service';
-import { MusicEvent } from '../MusicEvent';
+import { MusicEventService } from '../../music-event.service';
+import { MusicEvent } from '../../MusicEvent';
 
 @Component({
   selector: 'app-music-event-list',
