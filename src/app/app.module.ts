@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatInputModule, MatFormFieldModule, MatCardModule} from '@angular/material';
-import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -12,7 +11,6 @@ import { MusicEventModule } from './musicevent/music-event-module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     NotFoundComponent
   ],
   imports: [
@@ -22,7 +20,7 @@ import { MusicEventModule } from './musicevent/music-event-module';
     MatFormFieldModule,
     MatCardModule,
     RouterModule.forRoot([{
-      path: 'login', component:LoginComponent
+      path: 'login', loadChildren: './loginmodule/login.module#LoginModule'
     },{
       path: '',redirectTo: 'home', pathMatch: 'full'
     },{
