@@ -13,7 +13,9 @@ export class MusicEventListComponent implements OnInit {
   constructor(private musicEventService: MusicEventService) { }
 
   ngOnInit() {
-    this.musicevents = this.musicEventService.GetMusicEvents();
+    this.musicEventService.GetMusicEvents().subscribe((value: MusicEvent[])=>{
+      this.musicevents=value;
+    });
   }
 
 }

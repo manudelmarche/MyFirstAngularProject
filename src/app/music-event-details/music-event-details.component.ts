@@ -15,7 +15,9 @@ export class MusicEventDetailsComponent implements OnInit {
   ngOnInit() {
     //this.event=this.musicEventService.GetMusicEvent(+this.activatedRoute.snapshot.paramMap.get('id'));
     this.activatedRoute.paramMap.subscribe((params: ParamMap)=> {
-      this.event=this.musicEventService.GetMusicEvent(+params.get('id'));
+      this.musicEventService.GetMusicEvent(+params.get('id')).subscribe((value: MusicEvent)=>{
+        this.event = value;
+      });
     });
   }
 

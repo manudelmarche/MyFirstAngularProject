@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card *ngIf="event">
   <img [src]="event.imageSrc" />
   <div class="eventDataContainer">
     <h1>{{event.name}}</h1>

@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddMusicEventComponent } from './add-music-event/add-music-event.component';
 import { MusicEventDetailsComponent } from './music-event-details/music-event-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MusicEventDetailsComponent } from './music-event-details/music-event-de
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([{
       path: 'home', component: MusicEventListComponent
     },{
